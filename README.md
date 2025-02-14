@@ -9,7 +9,7 @@ This docker image inherits from the official docker image of F*, found at [fstar
   docker build -t dy-star .
 ```
 
-Alternatively, pull from [dassarthak18/dy-star](https://hub.docker.com/u/dassarthak18/dy-star):
+Alternatively, pull from [dassarthak18/dy-star](https://hub.docker.com/r/dassarthak18/dy-star):
 
 ```bash
   docker pull dassarthak18/dy-star:latest
@@ -22,3 +22,8 @@ docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" -e BRANCH_N
 ```
 
 If no branch name is specified, the script defaults to the master branch.
+
+# TO-DO
+
+[] Use a smaller base image that inherits from Ubuntu and does not lock the apt cache.
+[] Check why ```make``` is not working as expected.
