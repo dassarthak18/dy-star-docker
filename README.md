@@ -12,8 +12,8 @@ Alternatively, pull from <address>:
   docker pull <imagename>:latest
 ```
 
-Once that is out of the way, you can run an interactive container of this image as follows:
+Once that is out of the way, you can run an interactive container of this image. Note that since the DY* repository is private, you would require proper authentication (with your Personalized Access Token or PAT). The following is the command:
 
 ```bash
-docker run -it dy-star
+docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" dy-star
 ```
