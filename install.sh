@@ -9,5 +9,5 @@ if [ -z "$GIT_USERNAME" ] || [ -z "$GIT_PAT" ]; then
 fi
 
 git clone https://$GIT_USERNAME:$GIT_PAT@github.com/bichhawat/dolev-yao-star.git /home/build/dolev-yao-star/
-clear
+cd /home/build/dolev-yao-star/ && clear
 exec bash
