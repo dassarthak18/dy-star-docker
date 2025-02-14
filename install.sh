@@ -1,12 +1,12 @@
 #!/bin/bash
 
-GIT_USERNAME=$1
-GIT_PAT=$2
+export GIT_USERNAME=${GIT_USERNAME}
+export GIT_PAT=${GIT_PAT}
 
 if [ -z "$GIT_USERNAME" ] || [ -z "$GIT_PAT" ]; then
-  echo "Missing arguments: GIT_USERNAME, or GIT_PAT"
+  echo "Missing environment variables: GIT_USERNAME or GIT_PAT"
   exit 1
 fi
 
-git clone https://$GIT_USERNAME:$GIT_PAT@github.com/bichhawat/dolev-yao-star.git
+git clone https://$GIT_USERNAME:$GIT_PAT@github.com/bichhawat/dolev-yao-star.git /home/build/
 exec bash
