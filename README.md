@@ -23,9 +23,11 @@ docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" -e BRANCH_N
 
 If no branch name is specified, the script defaults to the master branch.
 
-**Note:** This repository hosts a GitHub Actions pipeline that builds and pushes a fresh image to DockerHub after every commit. If you wish to fork this repository and host your own DockerHub images, please ensure that the variables ```DOCKER_USERNAME``` and ```DOCKER_PASSWORD``` are set to their correct values (corresponding to your credentials) in [GitHub Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) for your forked repository.
+## Notes
+* The docker image is isolated from the repository or branch the user chooses to work with. This instantiation will be done when a container is run from the image that is built/pulled. There is an optional ```REPO_NAME``` variable that can be used to work with any private fork of the parent DY* repository. This ensures that you do not have to wait for a pull request to be merged to the main repository in order to verify the soundness of your code.
+* This repository hosts a GitHub Actions pipeline that builds and pushes a fresh image to DockerHub after every commit. If you wish to fork this repository and host your own DockerHub images, please ensure that the variables ```DOCKER_USERNAME``` and ```DOCKER_PASSWORD``` are set to their correct values (corresponding to your credentials) in [GitHub Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) for your forked repository.
 
-# To-Do
+## To-Dos
 
 - [ ] Use a smaller base image that inherits from Ubuntu and does not lock the apt cache.
 - [ ] Check why ```make``` is not working as expected inside the container.
