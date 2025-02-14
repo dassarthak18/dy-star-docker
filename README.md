@@ -15,8 +15,8 @@ Alternatively, pull from dassarthak18/dy-star:
   docker pull dassarthak18/dy-star:latest
 ```
 
-Once that is out of the way, you can run an interactive container of this image. Note that since the DY* repository is private, you would require proper authentication (with your [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)):
+Once that is out of the way, you can run an interactive container of this image. Note that since the DY* repository is private, you would require proper authentication (with your [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)). You would also require to specify the branch name you wish to work with:
 
 ```bash
-docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" dy-star
+docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" -e BRANCH_NAME="branch_name" dy-star
 ```
