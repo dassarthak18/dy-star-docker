@@ -14,7 +14,7 @@ Alternatively, pull from dassarthak18/dy-star:
   docker pull dassarthak18/dy-star:latest
 ```
 
-Once that is out of the way, you can run an interactive container of this image. Note that since the DY* repository is private, you would require proper authentication (with your Personalized Access Token or PAT). The following is the command:
+Once that is out of the way, you can run an interactive container of this image. Note that since the DY* repository is private, you would require proper authentication (with your Personalized Access Token or PAT):
 
 ```bash
 docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" dy-star
