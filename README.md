@@ -21,10 +21,11 @@ Once that is out of the way, you can run an interactive container of this image.
 docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" -e BRANCH_NAME="branch_name" dy-star
 ```
 
+**Note:** This repository hosts a GitHub Actions pipeline that builds and pushes a fresh image to DockerHub after every commit. If you wish to fork this repo and host your own DockerHub repository, please ensure that the variables ```DOCKER_USERNAME``` and ```DOCKER_PASSWORD``` are set to their correct values in [Github Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions).
+
 If no branch name is specified, the script defaults to the master branch.
 
 # To-Do
 
 - [ ] Use a smaller base image that inherits from Ubuntu and does not lock the apt cache.
 - [ ] Check why ```make``` is not working as expected inside the container.
-- [ ] Implement a CI/CD pipeline to update the Dockerhub image after every commit.
