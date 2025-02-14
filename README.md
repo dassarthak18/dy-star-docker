@@ -27,3 +27,4 @@ If no branch name is specified, the script defaults to the master branch.
 
 - [ ] Use a smaller base image that inherits from Ubuntu and does not lock the apt cache.
 - [ ] Check why ```make``` is not working as expected inside the container.
+- [ ] Implement a CI/CD pipeline to update the Dockerhub image after every commit.
