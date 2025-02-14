@@ -3,7 +3,7 @@
 This docker image inherits from the official docker image of F*, found at [fstarlang/fstar](https://hub.docker.com/r/fstarlang/fstar). To use this docker image, clone this repository and build the docker image. Make sure to clear your docker builder cache if this is not your first time building the image:
 
 ```bash
-  docker builder prune --all
+  docker builder prune --all --force
   git clone https://github.com/dassarthak18/dy-star-docker.git
   cd dy-star-docker/
   docker build -t dy-star .
