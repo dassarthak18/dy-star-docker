@@ -5,6 +5,7 @@ RUN cd dy-star-docker && chmod u+x install.sh
 
 ENV GIT_USERNAME=""
 ENV GIT_PAT=""
+ENV BRANCH_NAME=""
 
 WORKDIR /home/build/dy-star-docker/
 CMD ["./install.sh"]
