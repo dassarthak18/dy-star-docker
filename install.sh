@@ -8,5 +8,5 @@ if [ -z "$GIT_USERNAME" ] || [ -z "$GIT_PAT" ]; then
   exit 1
 fi
 
-git clone https://$GIT_USERNAME:$GIT_PAT@github.com/bichhawat/dolev-yao-star.git /home/build/
+git clone https://$GIT_USERNAME:$GIT_PAT@github.com/bichhawat/dolev-yao-star.git /home/build/dolev-yao-star/
 exec bash
