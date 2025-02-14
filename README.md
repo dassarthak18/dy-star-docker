@@ -9,7 +9,7 @@ This docker image inherits from the official docker image of F*, found at [fstar
   docker build -t dy-star .
 ```
 
-Alternatively, pull from dassarthak18/dy-star:
+Alternatively, pull from [dassarthak18/dy-star](https://hub.docker.com/u/dassarthak18/dy-star):
 
 ```bash
   docker pull dassarthak18/dy-star:latest
