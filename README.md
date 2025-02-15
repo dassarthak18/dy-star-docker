@@ -15,6 +15,8 @@ Alternatively, pull from [dassarthak18/dy-star](https://hub.docker.com/r/dassart
   docker pull dassarthak18/dy-star:latest
 ```
 
+Please note that it is better to build the image yourself if you want to access the latest F* release.
+
 Once that is out of the way, you can run an interactive container of this image. Note that since the DY* repository is private, you would require proper authentication (with your [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)). You could also specify (optional) the branch name you wish to work with:
 
 ```bash
