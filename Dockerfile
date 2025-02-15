@@ -5,11 +5,11 @@ LABEL org.opencontainers.image.authors="sarthak.das@iitgn.ac.in"
 RUN apt -y update && apt -y upgrade && apt -y autoremove
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt install -y git libgomp1 make wget
+RUN apt install -y curl git jq libgomp1 make wget
 RUN mkdir /home/build
 WORKDIR /home/build/
-RUN wget https://github.com/FStarLang/FStar/releases/download/v2025.02.06/fstar-v2025.02.06-Linux-x86_64.tar.gz
-RUN tar -xf fstar-v2025.02.06-Linux-x86_64.tar.gz && rm -rf fstar-v2025.02.06-Linux-x86_64.tar.gz
+RUN wget $(curl -s https://api.github.com/repos/fstarlang/fstar/releases/latest | jq -r '.assets[0].browser_download_url') -O fstar.tar.gz
+RUN tar -xf fstar.tar.gz && rm -rf fstar.tar.gz
 RUN mv fstar FStar
 
 # Install this repo and set things up
