@@ -8,7 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt install -y curl git jq libgomp1 make wget
 RUN mkdir /home/build
 WORKDIR /home/build/
-RUN wget $(curl -s https://api.github.com/repos/fstarlang/fstar/releases/latest | jq -r '.assets[0].browser_download_url') -O fstar.tar.gz
+RUN curl -L $(curl -s https://api.github.com/repos/fstarlang/fstar/releases/latest | jq -r '.assets[] | select(.name | contains("Linux")) | .browser_download_url') -o fstar.tar.gz
 RUN tar -xf fstar.tar.gz && rm -rf fstar.tar.gz
 RUN mv fstar FStar
 
