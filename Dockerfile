@@ -11,8 +11,9 @@ RUN wget https://github.com/FStarLang/FStar/releases/download/v2025.02.06/fstar-
 RUN tar -xf fstar-v2025.02.06-Linux-x86_64.tar.gz && rm -rf fstar-v2025.02.06-Linux-x86_64.tar.gz
 RUN mv fstar FStar
 
-# Install this repo and set things uo
+# Install this repo and set things up
 RUN cd /home/build/ && git clone https://github.com/dassarthak18/dy-star-docker.git
+RUN echo ls
 RUN cd dy-star-docker && chmod u+x install.sh
 
 ENV GIT_USERNAME=""
