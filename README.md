@@ -21,7 +21,7 @@ Once that is out of the way, you can run an interactive container of this image.
 docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" -e BRANCH_NAME="branch_name" dy-star
 ```
 
-if you built it yourself, otherwise:
+if you built it yourself. Otherwise:
 
 ```bash
 docker run -it -e GIT_USERNAME="your_username" -e GIT_PAT="your_PAT" -e BRANCH_NAME="branch_name" dassarthak18/dy-star
